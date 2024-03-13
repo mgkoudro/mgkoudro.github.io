@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Default variables for light theme */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-bg-color: #333;
+    --nav-bg-color: #f2f2f2;
+    --footer-bg-color: #333;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-bg-color: #222;
+    --nav-bg-color: #333;
+    --footer-bg-color: #222;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+   <weight>: Use a value from 100 to 900
+*/
+
+.work-sans-bodyFont {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.header, .footer {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+}
+
+.navigation {
+    background-color: var(--nav-bg-color);
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
