@@ -8,7 +8,6 @@
     --nav-bg-color: #f2f2f2;
     --footer-bg-color: #333;
 }
-
 /* Dark theme variables */
 [data-theme="dark"] {
     --background-color: #121212;
@@ -17,7 +16,27 @@
     --nav-bg-color: #333;
     --footer-bg-color: #222;
 }
+/* Dark theme table styles */
+[data-theme="dark"] table {
+    border-color: #444; /* Darker border for better visibility in dark mode */
+}
 
+[data-theme="dark"] th, [data-theme="dark"] td {
+    border-color: #666; /* Adjusting the border color for dark mode */
+    color: white; /* Light text color for dark background */
+}
+
+[data-theme="dark"] th {
+    background-color: #555; /* Darker header background */
+}
+
+[data-theme="dark"] tr:nth-child(even) {
+    background-color: #333; /* Darker row background for even rows */
+}
+
+[data-theme="dark"] tr:nth-child(odd) {
+    background-color: #444; /* Optionally, set a different color for odd rows */
+}
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -27,19 +46,16 @@ body {
     font-weight: 500;
     font-style: normal;
 }
-
 .header, .footer {
     background-color: var(--header-bg-color);
     color: var(--text-color);
 }
-
 .navigation {
     background-color: var(--nav-bg-color);
     place-items: center;
     align-content: center;
     display: flex;
 }
-
 section {
     padding: 10px;
     margin: 10px;
@@ -48,16 +64,77 @@ section {
     align-content: center;
     min-height: 100vh;
 }
-
 .hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
-
 .visible {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px 24px;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.download-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 24px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.experience-section, .education-section, .scholarships-section, .skills-section {
+    margin-bottom: 20px;
+}
+.experience-section p, .experience-section ul, .education-section p, .scholarships-section p, .skills-section ul {
+    margin: 10px 0;
+}
+.skills-section ul {
+    list-style-type: none; /* Removes the default list bullet */
+    padding: 0;
+}
+.skills-section li {
+    display: inline; /* Displays the skills inline */
+    margin-right: 5px; /* Adds some space to the right of each skill */
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333; /* Dark background for visibility */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    display: none; /* Hide the button by default */
+}
+
+#back-to-top:hover {
+    background-color: #555; /* Slightly lighter on hover */
 }
