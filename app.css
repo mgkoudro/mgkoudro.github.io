@@ -35,6 +35,9 @@ body {
 
 .navigation {
     background-color: var(--nav-bg-color);
+    place-items: center;
+    align-content: center;
+    display: flex;
 }
 
 section {
