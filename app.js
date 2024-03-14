@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleImg = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
 
     if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
-
-        if (currentTheme === 'dark') {
-            themeToggleBtn.textContent = 'Switch to Light Theme';
-        }
+        themeToggleImg.src = currentTheme === 'dark' ? 'lightbulb-on.png' : 'lightbulb-off.png';
     }
 
     themeToggleBtn.addEventListener('click', () => {
@@ -16,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
-            themeToggleBtn.textContent = 'Switch to Dark Theme';
+            themeToggleImg.src = 'lightbulb-off.png';
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
-            themeToggleBtn.textContent = 'Switch to Light Theme';
+            themeToggleImg.src = 'lightbulb-on.png';
         }
     });
 });
