@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggleImg.src = currentTheme === 'dark' ? 'lightbulb-on.png' : 'lightbulb-off.png';
     }
 
-    themeToggleBtn.addEventListener('click', () => {
+    themeToggleImg.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
 
         if (theme === 'dark') {
